@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>tototo - 토요일! 토요일은 토즈다</title>
+
+  <!-- Pure Framework -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  <!-- Custom Javascript -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/embedly-jquery/3.1.1/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9008b2b5941f28bf625907034254420"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var mapContainer = document.getElementById('location-map');
+      var mapOption = {
+        center: new daum.maps.LatLng(37.4811066, 126.9509232),
+        draggable: false,
+        level: 3
+      };
+
+      var map = new daum.maps.Map(mapContainer, mapOption);
+      var marker = new daum.maps.Marker({
+        position: new daum.maps.LatLng(37.4811066, 126.9509232)
+      });
+      var iwContent = '<div style="padding: 5px;">토즈 서울대입구점 (' +
+          '<a target="_blank" href="https://map.kakao.com/link/map/토즈 서울대입구점,37.4811066,' +
+          '126.9509232">카카오맵</a>)&nbsp;</div>';
+      var infoWindow = new daum.maps.InfoWindow({
+        position: new daum.maps.LatLng(37.4811066, 126.9509232),
+        content: iwContent
+      });
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      marker.setMap(map);
+      infoWindow.open(map, marker);
+    };
+
+    window.post_registration_status = function (registration_id, status) {
+      var statusInput = document.getElementById('registration_status_' + registration_id);
+      statusInput.value = status;
+      return true;
+    };
+
+    jQuery(function($) {
+      $('div.slide > a').embedly({
+        key: '27185d7bd8524eb59edc7cd830801ce9',
+        query: {
+          maxwidth: 400
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrapper" class="pure-g">
+  <header class="pure-u-1">
+    <h1>
+      <img src="/static/logo.png" alt="토요일! 토요일은 토즈다"/>
+    </h1>
+
+    <a href="/" class="pure-button pure-button-primary"><i class="fa fa-home"></i> 첫 페이지</a>
+    <a href="/meetings/" class="pure-button pure-button-primary"><i class="fa fa-calendar"></i> 토토토</a>
+    
+  </header>
+
+  
+  
+
+  <section class="pure-u-1">
+    <h2>토토토 모임 정보</h2>
+
+    <p>"스물 다섯 번째 모임"은 3명이 등록했습니다.
+      모임은 2016년 06월 25일 13시 00분에 시작해서
+      2016년 06월 25일 18시 00분에 끝납니다.</p>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>모임 장소 정보</h2>
+
+    <p>"스물 다섯 번째 모임"은 토즈 서울대입구점에서 열립니다. 자세한 위치는 아래 지도를 참고해주세요.</p>
+
+    <div id="location-map"></div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>목표</h2>
+
+    <p>이번 토토토 참여자들은 토토토 모임에서 아래와 같은 일들을 하기로 했습니다.</p>
+
+    <div class="wishlist pure-g">
+      
+        <form id="registration_manage_141" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/28/registration/141/manage">
+          <input type="hidden" id="registration_status_141" name="status"/>
+          
+            <div class="registration">
+              <h3>박치완</h3>
+
+              <p><p>FLINK-2131 / FLINK-1731 (K-Means) 관련 패치 작성</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_143" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/28/registration/143/manage">
+          <input type="hidden" id="registration_status_143" name="status"/>
+          
+            <div class="registration">
+              <h3>안민욱</h3>
+
+              <p><p>공부</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_142" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/28/registration/142/manage">
+          <input type="hidden" id="registration_status_142" name="status"/>
+          
+            <div class="registration">
+              <h3>전규현</h3>
+
+              <p><p>get some rest</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_144" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/28/registration/144/manage">
+          <input type="hidden" id="registration_status_144" name="status"/>
+          
+            <div class="registration not-attended">
+              <h3>부요한 (신청 후 불참)</h3>
+
+              <p><p>테크뉴스 탐독</p>
+
+<p></p></p>
+            </div>
+          
+        </form>
+      
+    </div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>발표 슬라이드</h2>
+    
+    
+      <p>업로드 된 발표 슬라이드가 없습니다.</p>
+    
+  </section>
+
+
+  <footer class="pure-u-1">2015-2019 Chiwan Park All rights reserved.</footer>
+</div>
+</body>
+</html>

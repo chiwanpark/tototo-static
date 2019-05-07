@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>tototo - 토요일! 토요일은 토즈다</title>
+
+  <!-- Pure Framework -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  <!-- Custom Javascript -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/embedly-jquery/3.1.1/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9008b2b5941f28bf625907034254420"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var mapContainer = document.getElementById('location-map');
+      var mapOption = {
+        center: new daum.maps.LatLng(37.5032378, 127.0246412),
+        draggable: false,
+        level: 3
+      };
+
+      var map = new daum.maps.Map(mapContainer, mapOption);
+      var marker = new daum.maps.Marker({
+        position: new daum.maps.LatLng(37.5032378, 127.0246412)
+      });
+      var iwContent = '<div style="padding: 5px;">토즈 강남2호점 (' +
+          '<a target="_blank" href="https://map.kakao.com/link/map/토즈 강남2호점,37.5032378,' +
+          '127.0246412">카카오맵</a>)&nbsp;</div>';
+      var infoWindow = new daum.maps.InfoWindow({
+        position: new daum.maps.LatLng(37.5032378, 127.0246412),
+        content: iwContent
+      });
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      marker.setMap(map);
+      infoWindow.open(map, marker);
+    };
+
+    window.post_registration_status = function (registration_id, status) {
+      var statusInput = document.getElementById('registration_status_' + registration_id);
+      statusInput.value = status;
+      return true;
+    };
+
+    jQuery(function($) {
+      $('div.slide > a').embedly({
+        key: '27185d7bd8524eb59edc7cd830801ce9',
+        query: {
+          maxwidth: 400
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrapper" class="pure-g">
+  <header class="pure-u-1">
+    <h1>
+      <img src="/static/logo.png" alt="토요일! 토요일은 토즈다"/>
+    </h1>
+
+    <a href="/" class="pure-button pure-button-primary"><i class="fa fa-home"></i> 첫 페이지</a>
+    <a href="/meetings/" class="pure-button pure-button-primary"><i class="fa fa-calendar"></i> 토토토</a>
+    
+  </header>
+
+  
+  
+
+  <section class="pure-u-1">
+    <h2>토토토 모임 정보</h2>
+
+    <p>"열 여덟 번째 모임"은 6명이 등록했습니다.
+      모임은 2016년 02월 20일 13시 00분에 시작해서
+      2016년 02월 20일 18시 00분에 끝납니다.</p>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>모임 장소 정보</h2>
+
+    <p>"열 여덟 번째 모임"은 토즈 강남2호점에서 열립니다. 자세한 위치는 아래 지도를 참고해주세요.</p>
+
+    <div id="location-map"></div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>목표</h2>
+
+    <p>이번 토토토 참여자들은 토토토 모임에서 아래와 같은 일들을 하기로 했습니다.</p>
+
+    <div class="wishlist pure-g">
+      
+        <form id="registration_manage_98" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/98/manage">
+          <input type="hidden" id="registration_status_98" name="status"/>
+          
+            <div class="registration">
+              <h3>Seun Oh</h3>
+
+              <p><p>개인 프로젝트</p>
+
+<p>안드로이드와 맥OS를 연결하여 데이터 주고 받는 프로그램 개발 </p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_100" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/100/manage">
+          <input type="hidden" id="registration_status_100" name="status"/>
+          
+            <div class="registration">
+              <h3>전규현</h3>
+
+              <p><p>Individual Research</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_97" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/97/manage">
+          <input type="hidden" id="registration_status_97" name="status"/>
+          
+            <div class="registration">
+              <h3>박치완</h3>
+
+              <p><p>FlinkML 이슈 하나 골라서 기여 시도해보기</p>
+
+<p>Naver D2 Campus Seminar 발표 자료 수정</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_101" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/101/manage">
+          <input type="hidden" id="registration_status_101" name="status"/>
+          
+            <div class="registration">
+              <h3>부요한</h3>
+
+              <p><p>API 문서화</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_102" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/102/manage">
+          <input type="hidden" id="registration_status_102" name="status"/>
+          
+            <div class="registration">
+              <h3>조현제</h3>
+
+              <p><p>Machine Learning Algorithm Research</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_99" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/20/registration/99/manage">
+          <input type="hidden" id="registration_status_99" name="status"/>
+          
+            <div class="registration">
+              <h3>안민욱</h3>
+
+              <p><p>Asterisk 오픈소스 전화 교환기 소개 발표</p>
+
+<p>인공지능 채팅 시스템 인테일러 유지보수</p>
+
+<p>운영 서비스 유지보수</p></p>
+              
+            </div>
+          
+        </form>
+      
+    </div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>발표 슬라이드</h2>
+    
+    
+      
+        <div class="pure-u-1 slides">
+          <h3>About Asterisk</h3>
+
+          <p>오픈 소스 전화 교환기 Asterisk에 대해 안민욱님이 발표해주셨습니다.</p>
+
+          <div class="slide">
+            <a target="_blank" href="http://www.slideshare.net/taylor224/about-asterisk">Link</a>
+          </div>
+        </div>
+      
+    
+  </section>
+
+
+  <footer class="pure-u-1">2015-2019 Chiwan Park All rights reserved.</footer>
+</div>
+</body>
+</html>

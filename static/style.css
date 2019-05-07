@@ -1,0 +1,198 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: "Open Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+a {
+  color: #000000;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+h1 > img {
+  max-width: 400px;
+}
+
+h1 > i.fa {
+  display: block;
+  margin: 15px 0;
+}
+
+h1 > span {
+  display: block;
+  margin: 4px 0;
+  font-size: 0.8em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin: 4px 0;
+}
+
+body {
+  max-width: 700px;
+  margin: 5px auto;
+  padding: 10px;
+}
+
+section > div {
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+div > p {
+  margin: 7px 0;
+}
+
+div > textarea {
+  min-height: 200px;
+}
+
+table {
+  margin: 20px auto;
+}
+
+form {
+  margin: 0 auto;
+}
+
+.pure-button-error {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(202, 60, 60);
+}
+
+.pure-button-success {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65);
+}
+
+.pure-button-black {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(0, 0, 0);
+}
+
+div.error-message {
+  background: #f2dede;
+  border-radius: 4px;
+  color: rgb(202, 60, 60);
+  margin-bottom: 10px;
+  border: 1px solid rgb(235, 204, 209);
+}
+
+div.error-message h3 {
+  margin: 0 0 1em 0;
+  display: inline;
+}
+
+div.error-message p {
+  display: inline;
+}
+
+div.wishlist div.registration {
+  border-bottom-color: rgb(238, 238, 238);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(27, 128, 158);
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-right-color: rgb(238, 238, 238);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(238, 238, 238);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  line-height: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  margin: 8px;
+}
+
+div.wishlist div.waiting {
+  border-left-color: rgb(240, 173, 78);
+}
+
+div.wishlist div.not-attended {
+  border-left-color: rgb(202, 60, 60);
+}
+
+div.wishlist div.refused {
+  border-left-color: rgb(0, 0, 0);
+}
+
+span.emphasis {
+  font-weight: bold;
+}
+
+img.user-image {
+  max-width: 150px;
+}
+
+div.wishlist div > h3, div.slides > h3 {
+  margin: 4px 0;
+  padding: 0;
+}
+
+div#location-map {
+  height: 350px;
+  margin-bottom: 18px;
+}
+
+div.slide {
+  margin: 5px auto;
+  text-align: center;
+}
+
+footer {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 480px) {
+  h1 > img {
+    max-width: 300px;
+  }
+
+  .pure-button {
+    font-size: 0.8em;
+  }
+
+  table .meeting-list-when, table .meeting-list-quota, table .meeting-list-admin {
+    display: none;
+  }
+
+  .pure-form .pure-input-1-2 {
+    width: 100%;
+  }
+
+  div > textarea {
+    min-height: 100px;
+  }
+
+  div#location-map {
+    height: 200px;
+  }
+}

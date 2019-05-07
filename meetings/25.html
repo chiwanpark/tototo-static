@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>tototo - 토요일! 토요일은 토즈다</title>
+
+  <!-- Pure Framework -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  <!-- Custom Javascript -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/embedly-jquery/3.1.1/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9008b2b5941f28bf625907034254420"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var mapContainer = document.getElementById('location-map');
+      var mapOption = {
+        center: new daum.maps.LatLng(37.499678, 127.0256416),
+        draggable: false,
+        level: 3
+      };
+
+      var map = new daum.maps.Map(mapContainer, mapOption);
+      var marker = new daum.maps.Marker({
+        position: new daum.maps.LatLng(37.499678, 127.0256416)
+      });
+      var iwContent = '<div style="padding: 5px;">토즈 강남점 (' +
+          '<a target="_blank" href="https://map.kakao.com/link/map/토즈 강남점,37.499678,' +
+          '127.0256416">카카오맵</a>)&nbsp;</div>';
+      var infoWindow = new daum.maps.InfoWindow({
+        position: new daum.maps.LatLng(37.499678, 127.0256416),
+        content: iwContent
+      });
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      marker.setMap(map);
+      infoWindow.open(map, marker);
+    };
+
+    window.post_registration_status = function (registration_id, status) {
+      var statusInput = document.getElementById('registration_status_' + registration_id);
+      statusInput.value = status;
+      return true;
+    };
+
+    jQuery(function($) {
+      $('div.slide > a').embedly({
+        key: '27185d7bd8524eb59edc7cd830801ce9',
+        query: {
+          maxwidth: 400
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrapper" class="pure-g">
+  <header class="pure-u-1">
+    <h1>
+      <img src="/static/logo.png" alt="토요일! 토요일은 토즈다"/>
+    </h1>
+
+    <a href="/" class="pure-button pure-button-primary"><i class="fa fa-home"></i> 첫 페이지</a>
+    <a href="/meetings/" class="pure-button pure-button-primary"><i class="fa fa-calendar"></i> 토토토</a>
+    
+  </header>
+
+  
+  
+
+  <section class="pure-u-1">
+    <h2>토토토 모임 정보</h2>
+
+    <p>"스물 두 번째 모임"은 5명이 등록했습니다.
+      모임은 2016년 04월 30일 12시 00분에 시작해서
+      2016년 04월 30일 18시 00분에 끝납니다.</p>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>모임 장소 정보</h2>
+
+    <p>"스물 두 번째 모임"은 토즈 강남점에서 열립니다. 자세한 위치는 아래 지도를 참고해주세요.</p>
+
+    <div id="location-map"></div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>목표</h2>
+
+    <p>이번 토토토 참여자들은 토토토 모임에서 아래와 같은 일들을 하기로 했습니다.</p>
+
+    <div class="wishlist pure-g">
+      
+        <form id="registration_manage_129" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/129/manage">
+          <input type="hidden" id="registration_status_129" name="status"/>
+          
+            <div class="registration">
+              <h3>한진수</h3>
+
+              <p><p>유니티설치</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_126" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/126/manage">
+          <input type="hidden" id="registration_status_126" name="status"/>
+          
+            <div class="registration">
+              <h3>부요한</h3>
+
+              <p><p>강남스타일 탐구</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_128" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/128/manage">
+          <input type="hidden" id="registration_status_128" name="status"/>
+          
+            <div class="registration">
+              <h3>김은숙</h3>
+
+              <p><p>실용주의 프로그래머 읽기</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_125" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/125/manage">
+          <input type="hidden" id="registration_status_125" name="status"/>
+          
+            <div class="registration">
+              <h3>박치완</h3>
+
+              <p><p>세미나 참석 내용 정리 및 Flink 미해결 이슈 1개 해결</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_127" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/127/manage">
+          <input type="hidden" id="registration_status_127" name="status"/>
+          
+            <div class="registration">
+              <h3>전규현</h3>
+
+              <p><p>Selenium</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_120" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/25/registration/120/manage">
+          <input type="hidden" id="registration_status_120" name="status"/>
+          
+            <div class="registration not-attended">
+              <h3>안민욱 (신청 후 불참)</h3>
+
+              <p><p>서비스 개발</p>
+
+<p>일하기</p></p>
+            </div>
+          
+        </form>
+      
+    </div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>발표 슬라이드</h2>
+    
+    
+      
+        <div class="pure-u-1 slides">
+          <h3>Selenium을 이용한 Dynamic Site Crawler 만들기</h3>
+
+          <p>KAIST 전규현님이 발표해 주셨습니다.</p>
+
+          <div class="slide">
+            <a target="_blank" href="http://www.slideshare.net/winglessagl/selenium-61525457">Link</a>
+          </div>
+        </div>
+      
+    
+  </section>
+
+
+  <footer class="pure-u-1">2015-2019 Chiwan Park All rights reserved.</footer>
+</div>
+</body>
+</html>

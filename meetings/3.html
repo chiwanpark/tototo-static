@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>tototo - 토요일! 토요일은 토즈다</title>
+
+  <!-- Pure Framework -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  <!-- Custom Javascript -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/embedly-jquery/3.1.1/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9008b2b5941f28bf625907034254420"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var mapContainer = document.getElementById('location-map');
+      var mapOption = {
+        center: new daum.maps.LatLng(37.5110935, 127.0433327),
+        draggable: false,
+        level: 3
+      };
+
+      var map = new daum.maps.Map(mapContainer, mapOption);
+      var marker = new daum.maps.Marker({
+        position: new daum.maps.LatLng(37.5110935, 127.0433327)
+      });
+      var iwContent = '<div style="padding: 5px;">토즈 메가젠토즈타워점 (' +
+          '<a target="_blank" href="https://map.kakao.com/link/map/토즈 메가젠토즈타워점,37.5110935,' +
+          '127.0433327">카카오맵</a>)&nbsp;</div>';
+      var infoWindow = new daum.maps.InfoWindow({
+        position: new daum.maps.LatLng(37.5110935, 127.0433327),
+        content: iwContent
+      });
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      marker.setMap(map);
+      infoWindow.open(map, marker);
+    };
+
+    window.post_registration_status = function (registration_id, status) {
+      var statusInput = document.getElementById('registration_status_' + registration_id);
+      statusInput.value = status;
+      return true;
+    };
+
+    jQuery(function($) {
+      $('div.slide > a').embedly({
+        key: '27185d7bd8524eb59edc7cd830801ce9',
+        query: {
+          maxwidth: 400
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrapper" class="pure-g">
+  <header class="pure-u-1">
+    <h1>
+      <img src="/static/logo.png" alt="토요일! 토요일은 토즈다"/>
+    </h1>
+
+    <a href="/" class="pure-button pure-button-primary"><i class="fa fa-home"></i> 첫 페이지</a>
+    <a href="/meetings/" class="pure-button pure-button-primary"><i class="fa fa-calendar"></i> 토토토</a>
+    
+  </header>
+
+  
+  
+
+  <section class="pure-u-1">
+    <h2>토토토 모임 정보</h2>
+
+    <p>"세 번째 모임"은 8명이 등록했습니다.
+      모임은 2015년 02월 14일 13시 00분에 시작해서
+      2015년 02월 14일 18시 00분에 끝납니다.</p>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>모임 장소 정보</h2>
+
+    <p>"세 번째 모임"은 토즈 메가젠토즈타워점에서 열립니다. 자세한 위치는 아래 지도를 참고해주세요.</p>
+
+    <div id="location-map"></div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>목표</h2>
+
+    <p>이번 토토토 참여자들은 토토토 모임에서 아래와 같은 일들을 하기로 했습니다.</p>
+
+    <div class="wishlist pure-g">
+      
+        <form id="registration_manage_14" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/14/manage">
+          <input type="hidden" id="registration_status_14" name="status"/>
+          
+            <div class="registration">
+              <h3>전규현</h3>
+
+              <p><p>coding</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_15" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/15/manage">
+          <input type="hidden" id="registration_status_15" name="status"/>
+          
+            <div class="registration">
+              <h3>안민욱</h3>
+
+              <p><p>인테일러 수리</p>
+
+<p>드론 커뮤니티 관리</p>
+
+<p>개인 프로젝트</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_16" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/16/manage">
+          <input type="hidden" id="registration_status_16" name="status"/>
+          
+            <div class="registration">
+              <h3>조현제</h3>
+
+              <p><p>이것저것 공부??</p>
+
+<p>근데 좀 늦습니다 ㅠ_ㅠ 학교에서 일이 두시에 끝나는...</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_18" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/18/manage">
+          <input type="hidden" id="registration_status_18" name="status"/>
+          
+            <div class="registration">
+              <h3>Chunghee Lee</h3>
+
+              <p><p>OS X 설치</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_19" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/19/manage">
+          <input type="hidden" id="registration_status_19" name="status"/>
+          
+            <div class="registration">
+              <h3>승원</h3>
+
+              <p><p>진수랑 자료구조 스터디 3주차 (4장 스택, 그전꺼 내용 followup), 인생 푸념</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_17" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/17/manage">
+          <input type="hidden" id="registration_status_17" name="status"/>
+          
+            <div class="registration">
+              <h3>Ryun</h3>
+
+              <p><p>Roam개발</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_12" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/12/manage">
+          <input type="hidden" id="registration_status_12" name="status"/>
+          
+            <div class="registration">
+              <h3>박치완</h3>
+
+              <p><p>오픈 프론티어 세미나 발표 준비</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_13" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/3/registration/13/manage">
+          <input type="hidden" id="registration_status_13" name="status"/>
+          
+            <div class="registration">
+              <h3>한진수</h3>
+
+              <p><p>자구공부, 네스프레소 자랑, 면허따기 위치선정</p></p>
+              
+            </div>
+          
+        </form>
+      
+    </div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>발표 슬라이드</h2>
+    
+    
+      <p>업로드 된 발표 슬라이드가 없습니다.</p>
+    
+  </section>
+
+
+  <footer class="pure-u-1">2015-2019 Chiwan Park All rights reserved.</footer>
+</div>
+</body>
+</html>

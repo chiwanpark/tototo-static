@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>tototo - 토요일! 토요일은 토즈다</title>
+
+  <!-- Pure Framework -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css"/>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic"/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+
+  <!-- Custom Javascript -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/embedly-jquery/3.1.1/jquery.embedly.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9008b2b5941f28bf625907034254420"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var mapContainer = document.getElementById('location-map');
+      var mapOption = {
+        center: new daum.maps.LatLng(37.5103257, 127.064274),
+        draggable: false,
+        level: 3
+      };
+
+      var map = new daum.maps.Map(mapContainer, mapOption);
+      var marker = new daum.maps.Marker({
+        position: new daum.maps.LatLng(37.5103257, 127.064274)
+      });
+      var iwContent = '<div style="padding: 5px;">토즈 삼성점 (' +
+          '<a target="_blank" href="https://map.kakao.com/link/map/토즈 삼성점,37.5103257,' +
+          '127.064274">카카오맵</a>)&nbsp;</div>';
+      var infoWindow = new daum.maps.InfoWindow({
+        position: new daum.maps.LatLng(37.5103257, 127.064274),
+        content: iwContent
+      });
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      marker.setMap(map);
+      infoWindow.open(map, marker);
+    };
+
+    window.post_registration_status = function (registration_id, status) {
+      var statusInput = document.getElementById('registration_status_' + registration_id);
+      statusInput.value = status;
+      return true;
+    };
+
+    jQuery(function($) {
+      $('div.slide > a').embedly({
+        key: '27185d7bd8524eb59edc7cd830801ce9',
+        query: {
+          maxwidth: 400
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrapper" class="pure-g">
+  <header class="pure-u-1">
+    <h1>
+      <img src="/static/logo.png" alt="토요일! 토요일은 토즈다"/>
+    </h1>
+
+    <a href="/" class="pure-button pure-button-primary"><i class="fa fa-home"></i> 첫 페이지</a>
+    <a href="/meetings/" class="pure-button pure-button-primary"><i class="fa fa-calendar"></i> 토토토</a>
+    
+  </header>
+
+  
+  
+
+  <section class="pure-u-1">
+    <h2>토토토 모임 정보</h2>
+
+    <p>"여덟 번째 모임"은 4명이 등록했습니다.
+      모임은 2015년 04월 11일 13시 30분에 시작해서
+      2015년 04월 11일 18시 30분에 끝납니다.</p>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>모임 장소 정보</h2>
+
+    <p>"여덟 번째 모임"은 토즈 삼성점에서 열립니다. 자세한 위치는 아래 지도를 참고해주세요.</p>
+
+    <div id="location-map"></div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>목표</h2>
+
+    <p>이번 토토토 참여자들은 토토토 모임에서 아래와 같은 일들을 하기로 했습니다.</p>
+
+    <div class="wishlist pure-g">
+      
+        <form id="registration_manage_41" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/41/manage">
+          <input type="hidden" id="registration_status_41" name="status"/>
+          
+            <div class="registration">
+              <h3>승원</h3>
+
+              <p><p>한숨 자구 한진수와 자구 스터디</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_40" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/40/manage">
+          <input type="hidden" id="registration_status_40" name="status"/>
+          
+            <div class="registration not-attended">
+              <h3>안민욱 (신청 후 불참)</h3>
+
+              <p><p>참깨빵위에 순쇠고기 패티두장<br>
+특별한 소스 양상추<br>
+치즈피클 양파까지<br>
+따다 따딴따<br>
+<img class="user-image" src="http://www.bloggang.com/data/m/minimarble/picture/1409846994.png"/></p></p>
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_44" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/44/manage">
+          <input type="hidden" id="registration_status_44" name="status"/>
+          
+            <div class="registration">
+              <h3>한진수</h3>
+
+              <p><p>자구함 열공해야하는데ㅠ</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_45" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/45/manage">
+          <input type="hidden" id="registration_status_45" name="status"/>
+          
+            <div class="registration">
+              <h3>전규현</h3>
+
+              <p><p>Mid-term paper prepation</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_43" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/43/manage">
+          <input type="hidden" id="registration_status_43" name="status"/>
+          
+            <div class="registration">
+              <h3>박치완</h3>
+
+              <p><p>중간고사 공부</p></p>
+              
+            </div>
+          
+        </form>
+      
+        <form id="registration_manage_42" method="post" class="pure-u-1 pure-u-md-1-2"
+              action="/meetings/8/registration/42/manage">
+          <input type="hidden" id="registration_status_42" name="status"/>
+          
+            <div class="registration not-attended">
+              <h3>Ryun (신청 후 불참)</h3>
+
+              <p><p>원격접속</p>
+
+<p></p></p>
+            </div>
+          
+        </form>
+      
+    </div>
+  </section>
+
+  <section class="pure-u-1">
+    <h2>발표 슬라이드</h2>
+    
+    
+      <p>업로드 된 발표 슬라이드가 없습니다.</p>
+    
+  </section>
+
+
+  <footer class="pure-u-1">2015-2019 Chiwan Park All rights reserved.</footer>
+</div>
+</body>
+</html>
